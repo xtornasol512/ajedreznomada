@@ -1,0 +1,7 @@
+*.pyc
+*__py__
+*~
+temp/
+config/
+*.sqlite
+.venv/
