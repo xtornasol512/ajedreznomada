@@ -3,11 +3,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>404 Not Found</title>
+    <title>{% block title %}{{error_title}}{% endblock title %}</title>
 </head>
 <body>
-    <h1>Ups Error 404 página no encontrada</h1>
-    <img src="{% static "img/chess_404.jpg" %}" alt="Chess Not Found">
+    <h1>{{error_msg}}</h1>
+    <img src='{% static "img/chess_404.jpg" %}' alt="{{error_alt}}">
     <p><a href="{% url 'home' %}">Regresar</a></p>
 
 </body>
