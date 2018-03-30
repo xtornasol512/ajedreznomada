@@ -31,6 +31,13 @@ DEBUG = ast.literal_eval(os.environ['DEBUG_STATE'])
 
 ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
 
+PRODUCTION = os.environ['PRODUCTION']
+
+if PRODUCTION:
+    ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
+else:
+    ALLOWED_HOSTS = [os.environ['HEROKU_APP_NAME']+".herokuapp.com"]
+
 
 # Application definition
 

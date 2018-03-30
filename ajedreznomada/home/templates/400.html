@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>404 Not Found</title>
+</head>
+<body>
+    <h1>Ups Error 404 página no encontrada</h1>
+    <img src="{% static "img/chess_404.jpg" %}" alt="Chess Not Found">
+    <p><a href="{% url 'home' %}">Regresar</a></p>
+
+</body>
+</html>
