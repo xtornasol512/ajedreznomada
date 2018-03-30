@@ -13,18 +13,20 @@
   {% endblock cssblock %}
 </head>
 <body>
-  <nav class="top-bar">
+  <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Ajedrez Nómada</li>
         <li>
           <a href="#">Contacto</a>
           <ul class="menu vertical">
+            <li><a href="#">Teléfono</a></li>
             <li><a href="#">Email</a></li>
-            <li><a href="#">Telefono</a></li>
             <li><a href="#">Ubicación</a></li>
           </ul>
         </li>
+        <li><a href="#">Torneos</a></li>
+        <li><a href="#">Three</a></li>
       </ul>
     </div>
     <div class="top-bar-right">
@@ -33,12 +35,13 @@
         <li><button type="button" class="button">Search</button></li>
       </ul>
     </div>
-  </nav>
+  </div>
   {% block content %}
   {% endblock content %}
 
   <!-- Compressed JavaScript -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
   <script src="{% static "js/main.js" %}"></script>
   {% block jsblock %}
