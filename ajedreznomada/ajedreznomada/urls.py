@@ -11,11 +11,16 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('home.urls')),
 ]
+
+if settings.DEBUG:
+  urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler400 = 'home.views.bad_request'
 handler403 = 'home.views.permission_denied'
