@@ -1,1 +1,43 @@
-app.json
+{
+  "name": "Ajedrez Nomada Project",
+  "description": "Chess Club App Page",
+  "scripts": {
+    "postdeploy": "bin/post_compile"
+  },
+  "env": {
+    "SECRET_KEY": {
+      "required": true
+    },
+    "DEBUG_STATE": {
+      "required": true
+    },
+    "PRODUCTION": {
+      "required": true
+    },
+    "DJANGO_SETTINGS_MODULE": {
+      "required": true
+    },
+    "SECURE_SSL_REDIRECT": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "papertrail",
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
