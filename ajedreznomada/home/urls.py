@@ -1,5 +1,5 @@
 ''' Urls for Home Views '''
-from django.conf.urls import include, url
+from django.conf.urls import url
 from .views import home, logout_page
 
 urlpatterns = [
