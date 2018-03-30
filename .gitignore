@@ -3,5 +3,5 @@
 *~
 temp/
 config/
-*.sqlite
+*.sqlite*
 .venv/
