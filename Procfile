@@ -1,1 +1,1 @@
-web: sh -c 'cd prescript && gunicorn prescript.wsgi:application'
+web: sh -c 'cd ajedreznomada && gunicorn ajedreznomada.wsgi:application'
