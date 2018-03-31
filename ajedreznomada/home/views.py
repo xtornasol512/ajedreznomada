@@ -6,6 +6,12 @@ def home(request):
     ''' First Landing page '''
     return render(request, "landing.html", {})
 
+def welcome(request, name=''):
+    ''' Say hello to users '''
+    if not name.strip() != '':
+        name = "visitante"
+    return render(request, 'welcome.html', {'name': name})
+
 def logout_page(request):
     ''' Logout users '''
     logout(request)

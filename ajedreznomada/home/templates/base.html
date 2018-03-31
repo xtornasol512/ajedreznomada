@@ -13,29 +13,7 @@
   {% endblock cssblock %}
 </head>
 <body>
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Ajedrez Nómada</li>
-        <li>
-          <a href="#">Contacto</a>
-          <ul class="menu vertical">
-            <li><a href="#">Teléfono</a></li>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Ubicación</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Torneos</a></li>
-        <li><a href="#">Suscripción</a></li>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><input id="welcome" type="search" placeholder="Escribe tu nombre"></li>
-        <li><button type="button" class="button">Say Hello!</button></li>
-      </ul>
-    </div>
-  </div>
+  {% include "components/menu.html" %}
   {% block content %}
   {% endblock content %}
 
