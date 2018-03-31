@@ -4,3 +4,4 @@
 
 echo "=> Performing database migrations..."
 python ajedreznomada/manage.py migrate --noinput
+python ajedreznomada/manage.py loaddata ajedreznomada/fixtures/initial_data.json
