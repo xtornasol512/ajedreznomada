@@ -1,2 +1,10 @@
 /*Main Css for Ajedrez Nomada*/
-
+.hero-header{
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.bg-scooter{
+  background: #36D1DC;
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
