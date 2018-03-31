@@ -15,6 +15,8 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
+    # Django JET URLS
+    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('home.urls')),
 ]

@@ -38,10 +38,13 @@ if PRODUCTION:
 else:
     ALLOWED_HOSTS = [os.environ['HEROKU_APP_NAME']+".herokuapp.com"]
 
+# Django JET config
+JET_SIDE_MENU_COMPACT = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
