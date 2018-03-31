@@ -4,20 +4,20 @@
 {% block title %}Ajedrez Nómada{% endblock title %}
 {% block content %}
   <section class="grid-container fluid">
-    <div class="grid-x grid-margin-x bg-scooter hero-header">
+    <div class="grid-x grid-margin-x bg-scooter hero-padding">
       <div class="cell small-x">
         <h1>Bienvenido a Ajedrez Nómada</h1>
       </div>
     </div>
   </section>
   <section class="grid-container fluid">
-    <div class="grid-x grid-margin-x">
+    <div class="grid-x grid-margin-x hero-padding">
       {% if blog_posts %}
+      <article class="cell small-12"><h2 class="text-center">Últimos posts</h2></article>
         {% for post in blog_posts %}
           <article class="cell medium-4">
             <h3>{{post.title}}</h3>
               <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
-
             <p>{{post.content}}</p>
             <p>{{post.category}}</p>
           </article>
@@ -25,4 +25,11 @@
       {% endif %}
     </div>
   </section>
+  <footer class="grid-container fluid bg-footer">
+    <div class="grid-x grid-margin-x text-center hero-padding">
+      <article class="cell small-4">@AjedrezNomada Copyright 2018</article>
+      <article class="cell small-4">Tehuacán, Pue.</article>
+      <article class="cell small-4">Powered by Django&Python</article>
+    </div>
+  </footer>
 {% endblock content %}

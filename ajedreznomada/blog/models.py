@@ -9,7 +9,6 @@ class Blog(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='blogs', blank=True, null=True)
     category = models.ForeignKey('blog.Category', related_name='blogs', blank=True, null=True)
 
-
     title = models.CharField('Titulo', max_length=255, default='')
     description = models.CharField('Descripción', max_length=255, blank=True, default='')
     content = models.TextField('Contenido', blank=True, default='')
@@ -23,9 +22,9 @@ class Blog(models.Model):
         return self.title
 
 
-
 class Category(models.Model):
     ''' Category Model '''
+
     name = models.CharField('Nombre', max_length=255, blank=True, default='')
     description = models.CharField('Descripción', max_length=255, blank=True, default='')
 
