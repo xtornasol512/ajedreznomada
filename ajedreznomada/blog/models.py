@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 
 
-class Blog(models.Model):
+class Post(models.Model):
     ''' Blog model '''
 
     # Fk fields

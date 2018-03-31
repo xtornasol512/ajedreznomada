@@ -36,11 +36,11 @@
     }
 },
 {
-    "model": "blog.blog",
+    "model": "blog.post",
     "pk": 1,
     "fields": {
         "author": 2,
-        "category": 1,
+        "category": null,
         "title": "Partida de ajedrez sobre ajedrez",
         "description": "Partida disputada 1987",
         "content": "<h1> Hola Mundo mi primer post</h1>",
