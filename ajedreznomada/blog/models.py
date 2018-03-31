@@ -14,7 +14,7 @@ class Post(models.Model):
     content = models.TextField('Contenido', blank=True, default='')
 
     # Boolean fields
-    is_active = models.BooleanField('¿Esta activo?',default=True)
+    is_active = models.BooleanField('¿Esta activo?', default=True)
 
     # Util datatimes
     created_at = models.DateTimeField("Fecha de creación", auto_now_add=True)
