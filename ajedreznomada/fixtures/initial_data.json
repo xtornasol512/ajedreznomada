@@ -1,0 +1,51 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$jBFsLhzpl3ZM$VHRswXaRYhYAzFh4tc4zu7l7aPkPSDrBQbohqCP3RcA=",
+        "last_login": "2018-03-31T06:39:59.144Z",
+        "is_superuser": true,
+        "username": "pepeche",
+        "first_name": "",
+        "last_name": "",
+        "email": "kerno.da.neo@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-03-30T06:46:48.987Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$L5qSUbbKk0U6$TeT2RJ+DBMwlbBrZYBWhCsI2eEc29W4Ur6hVL7jFsWU=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "chuko",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-03-31T06:40:18Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "blog.blog",
+    "pk": 1,
+    "fields": {
+        "author": 2,
+        "category": 1,
+        "title": "Partida de ajedrez sobre ajedrez",
+        "description": "Partida disputada 1987",
+        "content": "<h1> Hola Mundo mi primer post</h1>",
+        "created_at": "2018-03-31T06:43:31.982Z",
+        "last_modified": "2018-03-31T06:43:31.982Z"
+    }
+}
+]
