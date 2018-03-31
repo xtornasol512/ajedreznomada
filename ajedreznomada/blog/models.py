@@ -13,6 +13,9 @@ class Post(models.Model):
     description = models.CharField('Descripción', max_length=255, blank=True, default='')
     content = models.TextField('Contenido', blank=True, default='')
 
+    # Boolean fields
+    is_active = models.BooleanField('¿Esta activo?',default=True)
+
     # Util datatimes
     created_at = models.DateTimeField("Fecha de creación", auto_now_add=True)
     last_modified = models.DateTimeField("Última modificación", auto_now=True)

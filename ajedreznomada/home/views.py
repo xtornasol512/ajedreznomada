@@ -5,7 +5,7 @@ from blog.models import Post
 
 def home(request):
     ''' First Landing page '''
-    blog_posts = Post.objects.all().order_by('-id')
+    blog_posts = Post.objects.filter(is_active=True).order_by('-id')
     return render(request, "landing.html", {'blog_posts': blog_posts})
 
 def welcome(request, name=''):
