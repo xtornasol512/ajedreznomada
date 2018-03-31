@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load static %}
+{% load tz %}
 {% block title %}Ajedrez Nómada{% endblock title %}
 {% block content %}
   <section class="grid-container fluid">
@@ -10,6 +12,17 @@
   </section>
   <section class="grid-container fluid">
     <div class="grid-x grid-margin-x">
+      {% if blog_posts %}
+        {% for post in blog_posts %}
+          <article class="cell medium-4">
+            <h3>{{post.title}}</h3>
+              <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
+
+            <p>{{post.content}}</p>
+            <p>{{post.category}}</p>
+          </article>
+        {% endfor %}
+      {% endif %}
     </div>
   </section>
 {% endblock content %}

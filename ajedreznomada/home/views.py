@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from blog.models import Blog
 
 def home(request):
     ''' First Landing page '''
-    return render(request, "landing.html", {})
+    blog_posts = Blog.objects.all().order_by('-id')
+    return render(request, "landing.html", {'blog_posts': blog_posts})
 
 def welcome(request, name=''):
     ''' Say hello to users '''
