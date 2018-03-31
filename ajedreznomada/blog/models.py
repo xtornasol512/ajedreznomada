@@ -17,6 +17,10 @@ class Post(models.Model):
     created_at = models.DateTimeField("Fecha de creación", auto_now_add=True)
     last_modified = models.DateTimeField("Última modificación", auto_now=True)
 
+    class Meta:
+        verbose_name_plural = "Publicaciones"
+        ordering = ['created_at']
+
     def __str__(self):
         ''' Define str of model '''
         return self.title
@@ -27,6 +31,9 @@ class Category(models.Model):
 
     name = models.CharField('Nombre', max_length=255, blank=True, default='')
     description = models.CharField('Descripción', max_length=255, blank=True, default='')
+
+    class Meta:
+        verbose_name_plural = "Categorias"
 
     def __str__(self):
         ''' Define str of model '''
