@@ -2,10 +2,22 @@
 {% load tz %}
 {% block title %}{{ object.title }}{% endblock title %}
 {% block content %}
-  <h1>{{ object.title }}</h1>
-  <p>{{ object.description }}</p>
-  <p>Autor: {{ object.author }}</p>
-  <p>Published: {{ object.created_at|timezone:"America/Mexico_City" }}</p>
-  <p>Fecha: {{ now|timezone:"America/Mexico_City" }}</p>
-  <p>{{object.content|safe}}</p>
+  <div class="grid-x grid-margin-x hero-padding">
+    <article class="cell medium-6 medium-offset-3">
+      <div class="radius bordered card shadow">
+        <img src="https://picsum.photos/500/220/?random">
+        <div class="card-divider">
+          <a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title|upper}}</a>
+        </div>
+        <div class="card-section">
+          <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
+          <p>{{ object.description }}</p>
+          <p>{{post.content|safe}}</p>
+          {% if post.category %}
+            <p>{{post.category}}</p>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  </div>
 {% endblock content %}
