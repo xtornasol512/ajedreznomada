@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% load tz %}
 {% block title %}{{ object.title }}{% endblock title %}
 {% block content %}
   <h1>{{ object.title }}</h1>
   <p>{{ object.description }}</p>
   <p>Autor: {{ object.author }}</p>
-  <p>Published: {{ object.created_at|date }}</p>
-  <p>Fecha: {{ now|date }}</p>
+  <p>Published: {{ object.created_at|timezone:"America/Mexico_City" }}</p>
+  <p>Fecha: {{ now|timezone:"America/Mexico_City" }}</p>
+  <p>{{object.content|safe}}</p>
 {% endblock content %}
