@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$jBFsLhzpl3ZM$VHRswXaRYhYAzFh4tc4zu7l7aPkPSDrBQbohqCP3RcA=",
-        "last_login": "2018-03-31T06:39:59.144Z",
+        "last_login": "2018-04-06T21:11:45.807Z",
         "is_superuser": true,
         "username": "pepeche",
         "first_name": "",
@@ -36,6 +36,42 @@
     }
 },
 {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$PWveOo3Cdn4O$tFTdw4JNnIt6vKVj77P9LTGceYltcbfbMixdWxFjWsY=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "Gwenduchess",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-04-06T21:15:55Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$eAZCgHj991jn$zP5nv3Cu0f2YbcsuggSAUzSN4+u6qI8dzjXWIqroDIc=",
+        "last_login": "2018-04-06T21:19:21.518Z",
+        "is_superuser": true,
+        "username": "Pepechess",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-04-06T21:17:00Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "blog.post",
     "pk": 1,
     "fields": {
@@ -43,9 +79,38 @@
         "category": null,
         "title": "Partida de ajedrez sobre ajedrez",
         "description": "Partida disputada 1987",
-        "content": "<h1> Hola Mundo mi primer post</h1>",
+        "content": "<h1> Hola Mundo mi primer post</h1>\r\nP\u00e1gina en Construcci\u00f3n (:",
+        "is_active": true,
         "created_at": "2018-03-31T06:43:31.982Z",
-        "last_modified": "2018-03-31T06:43:31.982Z"
+        "last_modified": "2018-04-06T21:21:24.283Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+        "author": 1,
+        "category": 1,
+        "title": "2do Torneo Hemingway Coffee",
+        "description": "Torneo Abierto de Ajedrez con premiaci\u00f3n por categor\u00edas",
+        "content": "Torneo Hemingway Coffee\r\n\r\nLugar y Fecha: Parque Ecol\u00f3gico, Local 1, Reforma Nte. Domingo 1 de Abril del 2018.",
+        "is_active": true,
+        "created_at": "2018-03-31T17:10:04.954Z",
+        "last_modified": "2018-03-31T17:10:04.954Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+        "author": 4,
+        "category": 2,
+        "title": "Leyes de Ajedrez de la FIDE 2018",
+        "description": "Link de descarga a las leyes FIDE",
+        "content": "Las leyes oficiales son de la FIDE: \r\n\r\nhttp://fide.com/fide/handbook.html?id=208&view=article\r\n\r\nLas leyes traducidas al espa\u00f1ol son de la FEDA:\r\n\r\nhttp://feda.org/feda2k16/wp-content/uploads/Leyes2018.pdf",
+        "is_active": true,
+        "created_at": "2018-04-07T19:55:14.284Z",
+        "last_modified": "2018-04-07T19:55:14.284Z"
     }
 }
 ]
