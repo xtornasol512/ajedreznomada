@@ -4,4 +4,11 @@
 
 echo "=> Performing database migrations..."
 python ajedreznomada/manage.py migrate --noinput
-python ajedreznomada/manage.py loaddata ajedreznomada/fixtures/initial_data.json
+
+if [ $LOAD_FIXTURES == True ]; then
+  echo "=> Performing load fixtures ..."
+  python ajedreznomada/manage.py loaddata ajedreznomada/fixtures/initial_data.json
+else
+  echo "=> Automatic fixtures are off! ... Not doing anything ..."
+fi
+
