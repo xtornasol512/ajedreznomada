@@ -16,7 +16,7 @@
       <article class="cell small-12"><h2 class="text-center">Últimos posts</h2></article>
         {% for post in blog_posts %}
           <article class="cell medium-4">
-            <h3>{{post.title}}</h3>
+            <h3><a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title}}</a></h3>
               <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
             <p>{{post.content|safe}}</p>
             <p>{{post.category}}</p>
