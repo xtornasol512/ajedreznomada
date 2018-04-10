@@ -19,7 +19,9 @@
             <h3><a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title}}</a></h3>
               <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
             <p>{{post.content|safe}}</p>
-            <p>{{post.category}}</p>
+            {% if post.category %}
+              <p>{{post.category}}</p>
+            {% endif %}
           </article>
         {% endfor %}
       {% endif %}
