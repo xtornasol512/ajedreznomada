@@ -17,12 +17,13 @@
         {% for post in blog_posts %}
           <article class="cell medium-4">
             <div class="radius bordered card shadow">
-              <img src="https://picsum.photos/500/225/?random">
+              <img src="https://loremflickr.com/500/225/chess" alt="Imágen de {{post.description}}">
               <div class="card-divider">
                 <a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title|upper}}</a>
               </div>
               <div class="card-section">
                 <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
+                <p>{{post.description}}</p>
                 <p>{{post.content|safe}}</p>
                 {% if post.category %}
                   <p>{{post.category}}</p>
