@@ -91,7 +91,7 @@
     "pk": 2,
     "fields": {
         "author": 1,
-        "category": 1,
+        "category": null,
         "title": "2do Torneo Hemingway Coffee",
         "permanent_url": "2do-torneo-hemingway-coffee",
         "description": "Torneo Abierto de Ajedrez con premiaci\u00f3n por categor\u00edas",
@@ -106,7 +106,7 @@
     "pk": 3,
     "fields": {
         "author": 4,
-        "category": 2,
+        "category": null,
         "title": "Leyes de Ajedrez de la FIDE 2018",
         "permanent_url": "leyes-ajedrez-de-la-fide-2018",
         "description": "Link de descarga a las leyes FIDE",
