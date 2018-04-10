@@ -1,7 +1,11 @@
+import logging
+
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from blog.models import Post
+
+logger = logging.getLogger('django_info')
 
 def home(request):
     ''' First Landing page '''
@@ -10,6 +14,7 @@ def home(request):
 
 def welcome(request, name=''):
     ''' Say hello to users '''
+    logger.info('[Ajedrez Nomada, New Email] user has leave his email: {}'.format(name))
     if not name.strip() != '':
         name = "visitante"
     return render(request, 'welcome.html', {'name': name})
