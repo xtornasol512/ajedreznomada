@@ -17,7 +17,7 @@
         {% for post in blog_posts %}
           <article class="cell medium-4">
             <div class="radius bordered card shadow">
-              <img src="https://placehold.it/500x250">
+              <img src="https://picsum.photos/500/225/?random">
               <div class="card-divider">
                 <a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title|upper}}</a>
               </div>
