@@ -13,15 +13,22 @@
   <section class="grid-container fluid">
     <div class="grid-x grid-margin-x hero-padding">
       {% if blog_posts %}
-      <article class="cell small-12"><h2 class="text-center">Últimos posts</h2></article>
+      <article class="cell small-12"><h3 class="text-center">Últimos posts</h3></article>
         {% for post in blog_posts %}
           <article class="cell medium-4">
-            <h3><a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title}}</a></h3>
-              <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
-            <p>{{post.content|safe}}</p>
-            {% if post.category %}
-              <p>{{post.category}}</p>
-            {% endif %}
+            <div class="radius bordered card shadow">
+              <img src="https://placehold.it/500x250">
+              <div class="card-divider">
+                <a href="{% url 'blog:post-detail' post.permanent_url %}">{{post.title|upper}}</a>
+              </div>
+              <div class="card-section">
+                <h4><small>{{post.author|title}} - <span title="Creado el {{post.created_at|timezone:"America/Mexico_City"}}">{{post.created_at|timezone:"America/Mexico_City"}}</span></small></h4>
+                <p>{{post.content|safe}}</p>
+                {% if post.category %}
+                  <p>{{post.category}}</p>
+                {% endif %}
+              </div>
+            </div>
           </article>
         {% endfor %}
       {% endif %}
