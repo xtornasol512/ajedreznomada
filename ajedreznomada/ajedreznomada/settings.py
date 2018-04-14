@@ -31,10 +31,20 @@ DEBUG = ast.literal_eval(os.environ['DEBUG_STATE'])
 
 ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
 
+PRODUCTION = os.environ['PRODUCTION']
+
+if PRODUCTION:
+    ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
+else:
+    ALLOWED_HOSTS = [os.environ['HEROKU_APP_NAME']+".herokuapp.com"]
+
+# Django JET config
+JET_SIDE_MENU_COMPACT = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -19,7 +19,10 @@
     },
     "SECURE_SSL_REDIRECT": {
       "required": true
-    }
+    },
+    "LOAD_FIXTURES": {
+      "required": true
+    },
   },
   "formation": {
     "web": {

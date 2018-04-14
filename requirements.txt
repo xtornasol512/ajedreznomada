@@ -5,3 +5,6 @@ dj-database-url==0.5.0
 whitenoise==3.3.1
 psycopg2==2.7.4
 gunicorn==19.7.1
+
+# admin
+django-jet==1.0.7

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Bienvenido {{name}} {% endblock title %}
+{% block content %}
+  <section class="grid-container fluid">
+    <section class="grid-padding-x">
+      <div class="card" style="width: 33%">
+        <div class="card-divider">
+          <h4 class="text-center">Bienvenido {{name}}</h4>
+        </div>
+        <p class="text-center"><script src="https://lichess.org/training/embed?theme=auto&bg=auto"></script></p>
+        <div class="card-section">
+          <p>Gracias por estar interesado! Pronto te contactaremos mientras responde este problema de ajedrez!</p>
+        </div>
+      </div>
+    </section>
+  </section>
+{% endblock content %}
+{% block jsblock %}
+
+{% endblock jsblock %}
