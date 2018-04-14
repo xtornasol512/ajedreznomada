@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{error_title}}{% endblock title %}</title>
+</head>
+<body>
+    <h1>{{error_msg}}</h1>
+    <img width="100%" src='{% static "img/chess_404.jpg" %}' alt="{{error_alt}}">
+    <p><a href="{% url 'home' %}">Regresar</a></p>
+
+</body>
+</html>

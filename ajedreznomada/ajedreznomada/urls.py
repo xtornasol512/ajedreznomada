@@ -11,8 +11,21 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
+    # Django JET URLS
+    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('home.urls')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
 ]
+
+if settings.DEBUG:
+  urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+handler400 = 'home.views.bad_request'
+handler403 = 'home.views.permission_denied'
+handler404 = 'home.views.page_not_found'
+handler500 = 'home.views.server_error'
